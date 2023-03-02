@@ -13,10 +13,19 @@ function init() {
             "Tegnapi adatbázis-kezelés",
             "Kupcsik tanárnő vicces",
             "Tegnap kialaudtam magam",
-            "Sikerült Csolti Péteres feladatot teljesen megcsinálni! ",    "Jó edzés volt a héten!",
+            "Sikerült Csolti Péteres feladatot teljesen megcsinálni! ",    
+        "Jó edzés volt a héten!",
         
 
     ];
+    const adat1 ={
+        nev: "Benedek",
+        mondat: "Kupcsik tanárnő vicces",
+
+
+    };
+    console.log(adat1);
+
     megjelenit(list, articleElem);
 
 
@@ -34,4 +43,25 @@ function megjelenit(list, articleElem){
     txt+= "</ul>";
     articleElem.innerHTML = txt;
     
+    
 }
+function megjelenit2(list, SzuloElem){
+    let text = "";
+    let tablazat = "<table>";
+    for (let index = 0; index < list.length; index++){
+        text += "<div>" + "<h3>" + list[index].nev + "</h3>" + "<p>" + list[index];
+        tablazat +="<tr>";
+        tablazat += "<th>" + list[index].nev + "</th>" + "<td>" + list[index].mondat+"</td>";
+        tablazat +="</tr>";
+    }
+    
+
+tablazat += "</table>"
+console.log(tablazat);
+SzuloElem[0].innerHTML += text;
+tablazatelem.innerHTML += tablazat;
+
+    
+ }
+
+
